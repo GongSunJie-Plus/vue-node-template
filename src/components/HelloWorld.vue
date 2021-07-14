@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
-    
+    HelloWorld
   </div>
 </template>
 
 <script>
-import { getStart } from '@/api/start'
+import { getStart, test } from '@/api/start'
 
 export default {
   name: 'HelloWorld',
@@ -48,7 +48,9 @@ export default {
       getStart().then(res => {
         console.log(res)
       })
-
+      test({
+        redirect: window.location.origin
+      })
     }
   }
 }
