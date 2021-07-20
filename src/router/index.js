@@ -17,6 +17,13 @@ const routes = [
     meta: {
       title: 'Page2'
     }
+  },
+  {
+    path: '/test',
+    component: () => import('@/components/Test'),
+    meta: {
+      title: 'Page3'
+    }
   }
 ]
 

@@ -23,7 +23,7 @@ export default {
   methods: {
     init() {
       console.log(1)
-      this.start()
+      // this.start()
     },
     start() {
       // if (this.ws) this.ws.close()
