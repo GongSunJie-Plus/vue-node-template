@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://10.241.14.15:2333'
+const BASE_URL = 'http://127.0.0.1:2333'
 
 function getService(baseURL) {
   const service = axios.create({

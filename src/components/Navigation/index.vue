@@ -137,7 +137,10 @@ export default {
         }
       }
     },
-    handleShowItemOut() {
+    handleShowItemOut(e) {
+      const event = e || window.event;
+      // 恢复原导航栏显示
+      event.fromElement.style['opacity'] = '1';
       this.textShow = false;
     },
     handleCursor(e) {

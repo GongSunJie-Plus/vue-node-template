@@ -1,11 +1,11 @@
 import request from '@/utils/request'
 import axios from 'axios'
 
-export const getStart = (params) => 
+export const getStart = (data) => 
   request({
     url: '/start',
-    method: 'get',
-    params
+    method: 'put',
+    data
   })
 
 export const test = (params) => {

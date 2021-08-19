@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { getStart, test } from '@/api/start'
+import { getStart } from '@/api/start'
 
 export default {
   name: 'HelloWorld',
@@ -23,7 +23,7 @@ export default {
   methods: {
     init() {
       console.log(1)
-      // this.start()
+      this.start()
     },
     start() {
       // if (this.ws) this.ws.close()
@@ -45,12 +45,12 @@ export default {
       //   console.log('close')
       //   this.ws 
       // }
-      getStart().then(res => {
+      getStart({data: '1'}).then(res => {
         console.log(res)
       })
-      test({
-        redirect: window.location.origin
-      })
+      // test({
+      //   redirect: window.location.origin
+      // })
     }
   }
 }
