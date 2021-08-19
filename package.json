@@ -6,8 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "dev": "set LOCAL_DEV=local && concurrently \"npm:back\" \"vue-cli-service serve\"",
-    "back": "nodemon --watch server --exec \"node server/app.js\""
+    "dev": "set LOCAL_DEV=local && concurrently \"npm:back\" \"npm:socket\" \"vue-cli-service serve\"",
+    "back": "nodemon --watch server --exec \"node server/app.js\"",
+    "socket": "nodemon --watch server --exec \"node server/websocket.js\""
   },
   "dependencies": {
     "axios": "^0.21.1",

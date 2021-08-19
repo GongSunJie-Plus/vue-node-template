@@ -20,8 +20,8 @@ app.listen(port, () => console.log(`Server listening on port ${port}`));
 
 app.all('*', function(req, res, next) {
   console.log(req.headers.origin)
-  // res.header("Access-Control-Allow-Origin", req.headers.origin || '*');
-  res.header("Access-Control-Allow-Origin", '127.0.0.2');
+  res.header("Access-Control-Allow-Origin", req.headers.origin || '*');
+  // res.header("Access-Control-Allow-Origin", '127.0.0.2');
   res.header("Access-Control-Allow-Headers", "Content-Type,X-Requested-With");
   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
   res.header("Access-Control-Allow-Credentials", "true");
