@@ -10,14 +10,52 @@
         {{ item }}
       </div>
     </div>
+    <div style="text-align: center;">
+      <my-table
+        :data="tableData"
+        width="200"
+        height="100"
+      >
+        <div
+          lable="姓名"
+          props="name"
+          width="60"
+          fixed="left"
+        />
+        <div
+          lable="年龄"
+          props="age"
+          width="60"
+        />
+        <div
+          lable="性别"
+          props="sex"
+          width="60"
+        />
+        <div
+          lable="电话"
+          props="phone"
+          width="150"
+        />
+        <div
+          lable="国籍"
+          props="country"
+          width="60"
+        />
+      </my-table>
+    </div>
   </div>
 </template>
 
 <script>
 import { getStart } from '@/api/start'
+import MyTable from '@/components/MyTable/index.vue'
 
 export default {
   name: 'HelloWorld',
+  components: {
+    MyTable
+  },
   props: {
     msg: String
   },
@@ -25,7 +63,44 @@ export default {
     return {
       list: ['a', 2, 3],
       ws: null,
-      socketData: ''
+      socketData: '',
+      tableData: [
+        {
+          name: '张三',
+          age:  12,
+          sex: '男',
+          phone: '4211231',
+          country: '中国'
+        },
+        {
+          name: '张三',
+          age:  12,
+          sex: '男',
+          phone: '4211231',
+          country: '中国'
+        },
+        {
+          name: '张三',
+          age:  12,
+          sex: '男',
+          phone: '4211231',
+          country: '中国'
+        },
+        {
+          name: '张三',
+          age:  12,
+          sex: '男',
+          phone: '4211231',
+          country: '中国'
+        },
+        {
+          name: '张三',
+          age:  12,
+          sex: '男',
+          phone: '4211231',
+          country: '中国'
+        }
+      ]
     }
   },
   created() {
